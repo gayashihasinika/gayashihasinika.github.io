@@ -175,7 +175,7 @@ export default function App() {
               </button>
             </a>
 
-            {/* CV */}
+            {/* CV 
             <a
               href="/Gayashi-CV.pdf"
               target="_blank"
@@ -190,7 +190,7 @@ export default function App() {
                 </span>
 
               </button>
-            </a>
+            </a>*/}
 
           </div>
 
