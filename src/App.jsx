@@ -176,7 +176,11 @@ export default function App() {
             </a>
 
             {/* CV */}
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <a
+              href={`${import.meta.env.BASE_URL}Gayashi-CV.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button className="group relative overflow-hidden bg-[#111827] border border-cyan-400/30 px-7 py-3 rounded-full font-semibold transition duration-300 hover:scale-105 hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/10">
 
                 <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-20 transition duration-300"></span>
@@ -620,65 +624,65 @@ export default function App() {
 
         {/* Contact Form */}
         {/* Contact Form */}
-<form
-  action="https://formsubmit.co/gayashihasinika482@gmail.com"
-  method="POST"
-  className="max-w-3xl mx-auto space-y-6"
->
+        <form
+          action="https://formsubmit.co/gayashihasinika482@gmail.com"
+          method="POST"
+          className="max-w-3xl mx-auto space-y-6"
+        >
 
-  {/* Disable Captcha */}
-  <input type="hidden" name="_captcha" value="false" />
+          {/* Disable Captcha */}
+          <input type="hidden" name="_captcha" value="false" />
 
-  {/* Optional Subject */}
-  <input
-    type="hidden"
-    name="_subject"
-    value="New Portfolio Message!"
-  />
+          {/* Optional Subject */}
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Portfolio Message!"
+          />
 
-  {/* Redirect After Submit */}
-  <input
-    type="hidden"
-    name="_next"
-    value="http://localhost:5173/"
-  />
+          {/* Redirect After Submit */}
+          <input
+            type="hidden"
+            name="_next"
+            value="http://localhost:5173/"
+          />
 
-  {/* Name */}
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-    className="w-full bg-[#101827] border border-blue-500/20 rounded-2xl px-6 py-4 outline-none focus:border-blue-400 text-white"
-  />
+          {/* Name */}
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            className="w-full bg-[#101827] border border-blue-500/20 rounded-2xl px-6 py-4 outline-none focus:border-blue-400 text-white"
+          />
 
-  {/* Email */}
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-    className="w-full bg-[#101827] border border-blue-500/20 rounded-2xl px-6 py-4 outline-none focus:border-blue-400 text-white"
-  />
+          {/* Email */}
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            className="w-full bg-[#101827] border border-blue-500/20 rounded-2xl px-6 py-4 outline-none focus:border-blue-400 text-white"
+          />
 
-  {/* Message */}
-  <textarea
-    rows="6"
-    name="message"
-    placeholder="Your Message"
-    required
-    className="w-full bg-[#101827] border border-blue-500/20 rounded-2xl px-6 py-4 outline-none focus:border-blue-400 text-white resize-none"
-  ></textarea>
+          {/* Message */}
+          <textarea
+            rows="6"
+            name="message"
+            placeholder="Your Message"
+            required
+            className="w-full bg-[#101827] border border-blue-500/20 rounded-2xl px-6 py-4 outline-none focus:border-blue-400 text-white resize-none"
+          ></textarea>
 
-  {/* Submit Button */}
-  <button
-    type="submit"
-    className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full font-semibold transition duration-300 shadow-lg shadow-blue-500/20"
-  >
-    Send Message
-  </button>
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full font-semibold transition duration-300 shadow-lg shadow-blue-500/20"
+          >
+            Send Message
+          </button>
 
-</form>
+        </form>
 
       </section>
 
