@@ -11,7 +11,8 @@ import {
   FaGitAlt,
   FaGithub,
   FaLinkedin,
-  FaDesktop
+  FaDesktop,
+  FaPhp
 } from "react-icons/fa";
 
 import {
@@ -365,6 +366,14 @@ export default function App() {
                 <FaLaravel className="text-4xl text-red-500" />
                 <span className="text-gray-300 text-lg">
                   Laravel
+                </span>
+              </div>
+
+              {/* PHP */}
+              <div className="flex items-center gap-4 bg-[#0f172a] p-4 rounded-2xl hover:bg-blue-500/10 transition">
+                <FaPhp className="text-4xl text-purple-500" />
+                <span className="text-gray-300 text-lg">
+                  PHP
                 </span>
               </div>
 
