@@ -21,6 +21,7 @@ import {
   SiDocker
 } from "react-icons/si";
 import { useState } from "react";
+import cv from './assets/Gayashi-CV.pdf';
 
 export default function App() {
 
@@ -176,11 +177,7 @@ export default function App() {
             </a>
 
             {/* CV */}
-            <a
-              href={`${import.meta.env.BASE_URL}Gayashi-CV.pdf`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+           <a href={cv} target="_blank" rel="noopener noreferrer">
               <button className="group relative overflow-hidden bg-[#111827] border border-cyan-400/30 px-7 py-3 rounded-full font-semibold transition duration-300 hover:scale-105 hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/10">
 
                 <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-20 transition duration-300"></span>
@@ -623,7 +620,6 @@ export default function App() {
         </p>
 
         {/* Contact Form */}
-        {/* Contact Form */}
         <form
           action="https://formsubmit.co/gayashihasinika482@gmail.com"
           method="POST"
@@ -644,7 +640,7 @@ export default function App() {
           <input
             type="hidden"
             name="_next"
-            value="http://localhost:5173/"
+            value="https://gayashihasinika.github.io/"
           />
 
           {/* Name */}
