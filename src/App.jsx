@@ -178,7 +178,7 @@ export default function App() {
 
             {/* CV */}
             <a
-              href="./Gayashi_CV.pdf"
+              href="./GayashiHasinika_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
