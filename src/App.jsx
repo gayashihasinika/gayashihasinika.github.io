@@ -556,7 +556,7 @@ export default function App() {
 
           <div className="border-l border-purple-500 pl-8 space-y-10">
             <div>
-              <span className="text-cyan-400">2024 - Present</span>
+              <span className="text-cyan-400">2024 December - Present</span>
 
               <h3 className="text-2xl font-semibold mt-2">
                 Software Engineer Trainee
