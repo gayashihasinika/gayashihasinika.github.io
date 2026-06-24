@@ -58,79 +58,79 @@ export default function App() {
   };
 
   useEffect(() => {
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const docHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
 
-    const progress = (scrollTop / docHeight) * 100;
-    setScrollProgress(progress);
-  };
+      const progress = (scrollTop / docHeight) * 100;
+      setScrollProgress(progress);
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  handleScroll(); // initial call
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initial call
 
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
 
   return (
     <div className="bg-[#09090B] text-white min-h-screen overflow-hidden scroll-smooth font-sans">
 
-       {/* Scroll Progress Bar (ADD HERE) */}
-    <div className="fixed top-0 left-0 w-full h-[4px] z-[9999] bg-white/5 backdrop-blur">
-      <div
-        className="h-full bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 transition-all duration-150"
-        style={{ width: `${scrollProgress}%` }}
-      />
-    </div>
-    {/* Circular Scroll Indicator */}
-<div className="fixed bottom-8 right-8 z-[9999]">
-  <div className="relative w-16 h-16">
-    
-    {/* Background Circle */}
-    <svg className="w-16 h-16 rotate-[-90deg]">
-      <circle
-        cx="32"
-        cy="32"
-        r="28"
-        stroke="rgba(255,255,255,0.08)"
-        strokeWidth="4"
-        fill="none"
-      />
+      {/* Scroll Progress Bar (ADD HERE) */}
+      <div className="fixed top-0 left-0 w-full h-[4px] z-[9999] bg-white/5 backdrop-blur">
+        <div
+          className="h-full bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 transition-all duration-150"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
+      {/* Circular Scroll Indicator */}
+      <div className="fixed bottom-8 right-8 z-[9999]">
+        <div className="relative w-16 h-16">
 
-      {/* Progress Circle */}
-      <circle
-        cx="32"
-        cy="32"
-        r="28"
-        stroke="url(#gradient)"
-        strokeWidth="4"
-        fill="none"
-        strokeLinecap="round"
-        strokeDasharray={2 * Math.PI * 28}
-        strokeDashoffset={
-          2 * Math.PI * 28 * (1 - scrollProgress / 100)
-        }
-        className="transition-all duration-150"
-      />
+          {/* Background Circle */}
+          <svg className="w-16 h-16 rotate-[-90deg]">
+            <circle
+              cx="32"
+              cy="32"
+              r="28"
+              stroke="rgba(255,255,255,0.08)"
+              strokeWidth="4"
+              fill="none"
+            />
 
-      {/* Gradient */}
-      <defs>
-        <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#a855f7" />
-          <stop offset="50%" stopColor="#d946ef" />
-          <stop offset="100%" stopColor="#22d3ee" />
-        </linearGradient>
-      </defs>
-    </svg>
+            {/* Progress Circle */}
+            <circle
+              cx="32"
+              cy="32"
+              r="28"
+              stroke="url(#gradient)"
+              strokeWidth="4"
+              fill="none"
+              strokeLinecap="round"
+              strokeDasharray={2 * Math.PI * 28}
+              strokeDashoffset={
+                2 * Math.PI * 28 * (1 - scrollProgress / 100)
+              }
+              className="transition-all duration-150"
+            />
 
-    {/* Center Text */}
-    <div className="absolute inset-0 flex items-center justify-center text-xs text-white/70">
-      {Math.round(scrollProgress)}%
-    </div>
-  </div>
-</div>
+            {/* Gradient */}
+            <defs>
+              <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#a855f7" />
+                <stop offset="50%" stopColor="#d946ef" />
+                <stop offset="100%" stopColor="#22d3ee" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Center Text */}
+          <div className="absolute inset-0 flex items-center justify-center text-xs text-white/70">
+            {Math.round(scrollProgress)}%
+          </div>
+        </div>
+      </div>
 
 
       {/* Background Orbs - Enhanced */}
@@ -553,15 +553,26 @@ export default function App() {
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold">Experience</h2>
           </div>
+
           <div className="border-l border-purple-500 pl-8 space-y-10">
             <div>
               <span className="text-cyan-400">2024 - Present</span>
-              <h3 className="text-2xl font-semibold mt-2">Software Engineer Trainee</h3>
-              <ul className="mt-4 text-gray-400 space-y-2">
-                <li>• Developed React web applications</li>
-                <li>• Built Laravel REST APIs</li>
-                <li>• Database design and optimization</li>
-                <li>• Bug fixing and maintenance</li>
+
+              <h3 className="text-2xl font-semibold mt-2">
+                Software Engineer Trainee
+              </h3>
+
+              <p className="text-purple-400 font-medium mt-1">
+                Impresso Ceylon Holdings (PVT) LTD
+              </p>
+
+              <ul className="mt-4 text-gray-400 space-y-3">
+                <li>• Developed and maintained modern web applications using React.js and Laravel.</li>
+                <li>• Designed and integrated RESTful APIs for business-critical systems.</li>
+                <li>• Built responsive and user-friendly interfaces with Tailwind CSS.</li>
+                <li>• Worked with MySQL databases, including schema design and optimization.</li>
+                <li>• Collaborated with cross-functional teams to deliver production-ready features.</li>
+                <li>• Performed bug fixing, testing, and application maintenance.</li>
               </ul>
             </div>
           </div>
